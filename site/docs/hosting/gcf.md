@@ -1,3 +1,15 @@
 # Hosting: Google Cloud Functions
 
-Coming soon, please come back later.
+## basic example
+
+```ts
+import * as functions from "firebase-functions";
+import {bot} from "./telegram/bot";
+import {webhookCallback} from "grammy";
+
+
+export const helloWorld = functions.https.onRequest(webhookCallback(bot))
+
+```
+
+
